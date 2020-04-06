@@ -1,0 +1,11 @@
+<section class="phx-hero">
+  <h1>Index</h1>
+</section>
+
+<section class="row">
+  <article class="column">
+    <%= for post <- @posts do %>
+      <a href="/blog/<%= post.id %>" ><%= post.title %></a>
+    <% end %>
+  </article>
+</section>

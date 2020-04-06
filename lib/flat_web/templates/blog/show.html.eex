@@ -1,0 +1,18 @@
+<section class="phx-hero">
+  <h1><%= @post.title %></h1>
+  <p><%= @post.description %></p>
+</section>
+
+<section class="row">
+  <article class="column">
+    <p>
+    <%= raw @post.body %>
+    </p>
+
+    <ul>
+    <%= for tag <- @post.tags do %>
+      <li><a href="/blog/tag/<%= tag %>" ><%= tag %></a></li>
+    <% end %>
+    </ul>
+  </article>
+</section>
