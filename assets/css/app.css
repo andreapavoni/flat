@@ -1,3 +1,59 @@
 /* This file is for your main application css. */
 
-@import "./phoenix.css";
+/* @import "./phoenix.css"; */
+
+.container {
+  display: flex;
+  flex-flow: row wrap; /* we'll wrap */
+  margin: 0;
+}
+
+.header,
+.main,
+.sidebar,
+.footer {
+  flex: 1 100%;
+}
+
+.header {
+  background: #f0f080;
+  text-align: center;
+}
+
+.sidebar {
+  background: #80f0f0;
+  padding: 1rem;
+}
+
+.footer {
+  background: #f080f0;
+  padding: 1rem;
+  text-align: center;
+}
+
+.main {
+  background: #80f080;
+  padding: 1rem;
+}
+
+/* medium screen */
+@media all and (min-width: 600px) {
+  /* if screen > 600px sidebar appears alongside blog getting 1/3rd of space */
+  .main {
+    flex: 2 0px;
+  }
+  .sidebar {
+    flex: 1 0px;
+  }
+}
+
+/* Large screens */
+@media all and (min-width: 800px) {
+  /* On bigger screens, sidebar now only gets 1/4 of space */
+  .main {
+    flex: 3 0px;
+  }
+  .sidebar {
+    flex: 1 0px;
+  }
+}

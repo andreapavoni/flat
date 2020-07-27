@@ -1,30 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flat · Phoenix Framework</title>
-    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css")
+    %>"/>
   </head>
   <body>
-    <header>
-      <section class="container">
-        <nav role="navigation">
+    <!-- <div class="container">
+      <header>
+        <section class="header">
+          <nav role="navigation">
+            <ul>
+              <li>
+                <a href="https://hexdocs.pm/phoenix/overview.html"
+                  >Get Started</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <a href="http://phoenixframework.org/" class="phx-logo">
+            <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>"
+            alt="Phoenix Framework Logo"/>
+          </a>
+        </section>
+      </header>
+      <main role="main">
+        <p class="alert alert-info" role="alert">
+          <%= get_flash(@conn, :info) %>
+        </p>
+        <p class="alert alert-danger" role="alert">
+          <%= get_flash(@conn, :error) %>
+        </p>
+
+        <div class="sidebar">
+          <h3>Some things</h3>
           <ul>
-            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
+            <li>Thing 1</li>
+            <li>Thing 2</li>
+            <li>Thing 3</li>
           </ul>
-        </nav>
-        <a href="http://phoenixframework.org/" class="phx-logo">
-          <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
-        </a>
-      </section>
-    </header>
-    <main role="main" class="container">
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-      <%= render @view_module, @view_template, assigns %>
-    </main>
-    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+          <h3>More things</h3>
+          <ul>
+            <li>Thing 1</li>
+            <li>Thing 2</li>
+            <li>Thing 3</li>
+          </ul>
+        </div>
+
+        <section class="main">
+          <%= render @view_module, @view_template, assigns %>
+        </section>
+      </main>
+      <footer class="footer">Footer</footer>
+    </div> -->
+    <div class="container">
+      <div class="header"><h1>Header</h1></div>
+      <div class="main">
+        <%= render @view_module, @view_template, assigns %>
+      </div>
+      <div class="sidebar">
+        <h3>Some things</h3>
+        <ul>
+          <li>Thing 1</li>
+          <li>Thing 2</li>
+          <li>Thing 3</li>
+        </ul>
+        <h3>More things</h3>
+        <ul>
+          <li>Thing 1</li>
+          <li>Thing 2</li>
+          <li>Thing 3</li>
+        </ul>
+        <h3>Many things</h3>
+        <ul>
+          <li>Thing 1</li>
+          <li>Thing 2</li>
+          <li>Thing 3</li>
+          <li>Thing 4</li>
+          <li>Thing 5</li>
+          <li>Thing 6</li>
+          <li>Thing 7</li>
+          <li>Thing 8</li>
+          <li>Thing 9</li>
+          <li>Thing 10</li>
+          <li>Thing 11</li>
+          <li>Thing 12</li>
+          <li>Thing 13</li>
+          <li>Thing 14</li>
+          <li>Thing 15</li>
+          <li>Thing 16</li>
+          <li>Thing 17</li>
+          <li>Thing 18</li>
+          <li>Thing 19</li>
+          <li>Thing 20</li>
+          <li>Thing 21</li>
+        </ul>
+      </div>
+      <div class="footer">Footer</div>
+    </div>
+    <script type="text/javascript" src="<%= Routes.static_path(@conn,
+    "/js/app.js") %>"/>
   </body>
 </html>
